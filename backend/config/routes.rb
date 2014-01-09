@@ -2,7 +2,7 @@ RailStrap::Application.routes.draw do
   
   get 'timeline' => "timeline#index"
   get 'timeline/:slug' => "timeline#show", :as => "timeline_show"
-  resources :scrobbles, path: '/api/scrobbles'
+  #resources :scrobbles, path: '/api/scrobbles'
   get 'api/scrobbles/fix/new' => "scrobbles#create_tmp"
 
   # resources :episodes
