@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @show.name
+
+= link_to 'Edit', edit_show_path(@show)
+\|
+= link_to 'Back', shows_path

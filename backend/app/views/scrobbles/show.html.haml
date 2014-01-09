@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @scrobble.user
+%p
+  %b Episode:
+  = @scrobble.episode
+
+/ = link_to 'Back', timeline_path

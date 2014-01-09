@@ -1,0 +1,21 @@
+%h1 Listing scrobbles
+
+%table
+  %tr
+    %th User
+    %th Episode
+    %th
+    %th
+    %th
+
+  - @scrobbles.each do |scrobble|
+    %tr
+      %td= scrobble.user
+      %td= scrobble.episode
+      %td= link_to 'Show', scrobble
+      %td= link_to 'Edit', edit_scrobble_path(scrobble)
+      %td= link_to 'Destroy', scrobble, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Scrobble', new_scrobble_path

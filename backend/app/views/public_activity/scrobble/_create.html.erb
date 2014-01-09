@@ -1,0 +1,10 @@
+watched
+
+<% if activity.trackable %>
+  <%= activity.trackable.episode %>
+  <% if false %>
+  	<%= link_to activity.trackable.episode, activity.trackable %>
+  <% end %>
+<% else %>
+  which has since been removed
+<% end %>

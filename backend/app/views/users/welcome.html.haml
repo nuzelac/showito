@@ -1,0 +1,26 @@
+.row
+	.col-12
+		Hello #{current_user.username}!
+		Here's a list of your API tokens:
+		%ul
+		- @api_keys.each do |api_key|
+			%li= api_key
+		%br
+		Make sure to set it inside 
+		= link_to 'vlclastfm.lua', download_lua_path
+		before you use the plugin
+
+		%br
+		%br
+		
+		%pre
+			INSTALLATION:
+			Put the file in the VLC subdir /lua/extensions, by default:
+			* Windows (all users): %ProgramFiles%\VideoLAN\VLC\lua\extensions\
+			* Windows (current user): %APPDATA%\VLC\lua\extensions\
+			* Linux (all users): /usr/share/vlc/lua/extensions/
+			* Linux (current user): ~/.local/share/vlc/lua/extensions/
+			* Mac OS X (all users): /Applications/VLC.app/Contents/MacOS/share/lua/extensions/
+			(create directories if they don't exist)
+			Restart the VLC.
+			Then you simply use the extension by going to the "View" menu and selecting it.		

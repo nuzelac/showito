@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: filename_histories
+#
+#  id          :integer          not null, primary key
+#  filename    :string(255)
+#  user_id     :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#  scrobble_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  filename: MyString
+  user_id: 
+
+two:
+  filename: MyString
+  user_id: 

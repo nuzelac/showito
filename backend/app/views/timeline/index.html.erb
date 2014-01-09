@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col-8 col-offset-1">
+	<table class="table table-striped table-hover">
+		<tbody>
+		<% @activities.each do |activity| %>
+			<tr>
+			<td>
+		  	<% if activity.trackable.episode.season.show.banner? %>
+		  		<%= image_tag(activity.trackable.episode.season.show.banner.url(:thumb)) %>
+		  	<% end %>
+		  	</td>
+		  	<td>
+		    <%= link_to activity.owner.username, timeline_show_path(slug: activity.owner.slug) if activity.owner %>
+		    <%= render_activity activity %>
+		    </td>
+		    <td>
+			<small><%= distance_of_time_in_words_to_now(activity.created_at) %> ago</small>
+			</td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+	</div>
+</div>
