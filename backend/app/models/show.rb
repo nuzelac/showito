@@ -17,7 +17,7 @@ class Show < ActiveRecord::Base
   has_many :seasons
 
   has_attached_file :banner, styles: {
-    thumb: '100x100>',
+    thumb: '50x50>',
     square: '200x200#',
     medium: '300x300>'
   }  
