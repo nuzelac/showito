@@ -14,7 +14,15 @@
 		    <%= render_activity activity %>
 		    </td>
 		    <td>
-			<small><%= distance_of_time_in_words_to_now(activity.created_at) %> ago</small>
+		    <% if activity.created_at.year == Time.now.year %>
+		    	<% if activity.created_at > 1.day.ago %>
+					<small><%= distance_of_time_in_words_to_now(activity.created_at) %> ago</small>
+				<% else %>
+					<small><%= activity.created_at.strftime("%d %b") %></small>
+				<% end %>
+			<% else %>
+				<small><%= activity.created_at.strftime("%d %b %Y") %></small>
+			<% end %>
 			</td>
 			</tr>
 		<% end %>
