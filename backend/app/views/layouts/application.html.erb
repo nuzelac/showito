@@ -41,6 +41,7 @@
         <%= link_to RailStrap::Application.config.application_name, root_path, :class => 'navbar-brand' %>
         <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
+            <li><%= link_to "Home", root_path %></li>
             <% if false %>
               <% if current_user %>
               <li><%= link_to "Users", users_path %></li>
