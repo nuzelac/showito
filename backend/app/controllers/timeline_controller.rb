@@ -6,7 +6,7 @@ class TimelineController < ApplicationController
   end
 
   def show
-  	user = User.friendly.find(params[:slug])
-  	@activities = PublicActivity::Activity.order("created_at DESC").where(owner_type: "User", owner_id: user).all
+  	@user = User.friendly.find(params[:slug])
+  	@activities = PublicActivity::Activity.order("created_at DESC").where(owner_type: "User", owner_id: @user).all
   end
 end
