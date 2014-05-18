@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
-gem 'rails', '4.0.5'
+ruby "2.1.1"
+gem 'rails', '4.1'
 
 gem 'journey', :git => 'https://github.com/rails/journey.git'
 gem 'arel'
-gem 'activerecord-deprecated_finders', git: 'https://github.com/rails/activerecord-deprecated_finders.git'
+gem 'activerecord-deprecated_finders', require: 'active_record/deprecated_finders'
 
 # tost
 gem 'annotate'
 gem 'seed_dump'
 gem 'public_activity'
-gem 'friendly_id', '~> 5.0.0', git: "https://github.com/norman/friendly_id.git"
+gem 'friendly_id'
 gem 'tvdb_party'
 gem 'newrelic_rpm'
 gem 'rails_12factor', group: :production
