@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby "2.0.0"
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.5'
 
 gem 'journey', :git => 'https://github.com/rails/journey.git'
 gem 'arel'
@@ -38,12 +38,13 @@ gem 'haml-rails'
 
 gem "bcrypt-ruby", :require => "bcrypt"
 
+gem 'sass-rails'
+gem 'coffee-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sprockets-rails'
-  gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git'
-  gem 'coffee-rails', :git => 'https://github.com/rails/coffee-rails.git'
 
   # gem 'therubyracer', platforms: :ruby
 
