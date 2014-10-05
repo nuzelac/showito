@@ -20,7 +20,8 @@ class Show < ActiveRecord::Base
     thumb: '50x50>',
     square: '200x200#',
     medium: '300x300>'
-  }  
+  }
+  do_not_validate_attachment_file_type :banner
   
   def to_s
     name
