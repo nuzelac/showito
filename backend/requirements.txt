@@ -1,1 +1,1 @@
-guessit==0.9.3
+guessit==0.9.4
